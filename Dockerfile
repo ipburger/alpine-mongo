@@ -11,4 +11,6 @@ VOLUME /data/db
 
 EXPOSE 27017
 
-CMD mongod --repair && mongod
+COPY run.sh /root
+ENTRYPOINT [ "/root/run.sh" ]
+CMD [ "mongod --repair --nojournal" ]
