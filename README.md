@@ -1,4 +1,11 @@
 # Dockerized MongoDB
 
-## TODO
-- Add important info about the container and stuff here
+## Usage
+
+To run a shell session:
+
+    $ docker exec -ti alpine-mongo sh
+
+To use the mongo shell client:
+
+	$ docker exec -ti mongo mongo
