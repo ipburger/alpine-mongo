@@ -8,4 +8,4 @@ To run a shell session:
 
 To use the mongo shell client:
 
-	$ docker exec -ti mongo mongo
+	$ docker exec -ti alpine-mongo mongo
