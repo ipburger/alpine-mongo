@@ -6,4 +6,7 @@ rm /usr/bin/mongoperf
 
 VOLUME /data/db
 EXPOSE 27017
-CMD mongod --repair && mongod --nojournal
+
+COPY run.sh /root
+ENTRYPOINT [ "/root/run.sh" ]
+CMD mongod --nojournal
