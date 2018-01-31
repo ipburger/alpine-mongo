@@ -1,9 +1,9 @@
 FROM alpine:3.7
 
 RUN \
-apk add --no-cache mongodb && \
+apk update && apk add mongodb && \
 rm /usr/bin/mongoperf && \
-apk del --no-cache --progress --purge && rm -rf /var/cache/apk/*
+apk del --progress --purge && rm -rf /var/cache/apk/*
 
 VOLUME /data/db
 EXPOSE 27017
