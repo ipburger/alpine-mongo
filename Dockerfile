@@ -10,4 +10,4 @@ EXPOSE 27017
 
 COPY run.sh /root
 ENTRYPOINT [ "/root/run.sh" ]
-CMD --nojournal
+CMD [ "--nojournal" ]
