@@ -10,4 +10,4 @@ EXPOSE 27017
 
 COPY run.sh /root
 ENTRYPOINT [ "/root/run.sh" ]
-CMD [ "mongod", "--nojournal" ]
+CMD [ "mongod", "--nojournal", "--bind_ip", "127.0.0.1" ]
