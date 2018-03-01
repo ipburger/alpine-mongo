@@ -1,5 +1,9 @@
 FROM alpine:3.7
 
+ARG MONGO_ADMIN_PWD PRITUNL_USER_PWD
+ENV MONGO_ADMIN_PWD=${MONGO_ADMIN_PWD} \
+    PRITUNL_USER_PWD=${PRITUNL_USER_PWD}
+
 RUN \
 apk update && apk add mongodb && \
 rm /usr/bin/mongoperf && \
