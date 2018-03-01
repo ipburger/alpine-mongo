@@ -14,6 +14,5 @@ COPY ./root /
 VOLUME /data/db
 EXPOSE 27017
 
-COPY run.sh /root
-ENTRYPOINT [ "/root/run.sh" ]
+ENTRYPOINT [ "/scripts/run.sh" ]
 CMD [ "mongod", "--nojournal" ]
