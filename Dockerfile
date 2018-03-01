@@ -16,4 +16,4 @@ VOLUME /data/db
 EXPOSE 27017
 
 ENTRYPOINT [ "/scripts/run.sh" ]
-CMD [ "mongod", "--nojournal" ]
+CMD [ "mongod", "--nojournal", "--config /etc/mongod.conf" ]
