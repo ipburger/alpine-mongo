@@ -3,7 +3,7 @@
 [ "$1" = "mongod" ] || exec "$@" || exit $?
 
 #Repair the database before anything
-mongod --repair
+[ -f /data/db/mongod.lock ] && mongod --repair
 
 # Make sure that database is owned by user mongodb
 chown -R mongodb /data/db
